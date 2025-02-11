@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>ToDo List</title>
+    <link rel="stylesheet" href="todo_list.css">
 </head>
 <body>
     <h1>ToDo List</h1>
@@ -13,7 +14,13 @@
         <!-- Tasks will be displayed here -->
     </ul>
 
-    <button id="clearCompletedBtn">Clear Completed</button>
+    <button id="clearCompletedBtn">Clear Completed</button> <br>
+    <button id="clearAllBtn">Clear All Tasks</button>
+    
+    <div id="confirm-deletion" class="hidden">
+        <span>Click to validate task delete</span>
+        <button id="validateClearanceBtn">Confirm delete</button>
+    </div>
 
 <script src="./todo_list.js"></script>
 </body>

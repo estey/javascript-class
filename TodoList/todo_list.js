@@ -3,6 +3,8 @@ const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 const clearCompletedBtn = document.getElementById("clearCompletedBtn");
+const clearAllBtn = document.getElementById("clearAllBtn");
+const validateClearanceBtn = document.getElementById("validateClearanceBtn");
 
 let tasks = [];
 
@@ -36,5 +38,20 @@ function clearCompletedTasks() {
     displayTasks();
 }
 
+function clearAllTasks() {
+    document.getElementById('confirm-deletion').classList.toggle('hidden');
+}
+
+function confirmAllTasksClearance() {
+    document.getElementById('confirm-deletion').classList.toggle('hidden');
+    tasks.length = 0;
+    displayTasks();
+}
+
+
+
+
 addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+clearAllBtn.addEventListener("click", clearAllTasks);
+validateClearanceBtn.addEventListener("click", confirmAllTasksClearance);
